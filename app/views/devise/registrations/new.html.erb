@@ -1,0 +1,47 @@
+<div class='container-fluid' style ='margin-top: 150px'>
+  <div class='row'>  
+    <div class='col-md-6 offset-md-3'>
+      <h2>Registrar</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "Nome", class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "E-mail", class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "Nova Senha", class: 'form-control'%>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "Nova Senha", class: 'form-control'%>
+        </div>
+
+        <div class="field"> 
+          <%= f.check_box :admin %>
+          <%= f.label :admin %>
+        </div>
+
+        <br>
+
+        <div class="actions">
+          <%= f.submit "Registrar", class: 'btn btn-info'%>
+        </div>
+      <% end %>
+
+      <%# <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
