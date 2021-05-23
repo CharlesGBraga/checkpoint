@@ -1,7 +1,14 @@
 # encoding: UTF-8
 # pt-BR translations for Devise
 pt-BR:
-  devise:
+  name: "Nome"
+  email: "E-mail"
+  address: "Endereço"
+  password: "Senha"
+  password_confirmation: "Confirmar senha"
+  remember_me: "Lembra Senha"
+  Log_in: "Logar"
+  devise:    
     confirmations:
       confirmed: 'Sua conta foi confirmada com sucesso. Você está logado.'
       send_instructions: 'Dentro de minutos, você receberá um e-mail com instruções para a confirmação da sua conta.'
@@ -57,5 +64,5 @@ pt-BR:
       not_found: 'não encontrado'
       not_locked: 'não foi bloqueado'
       not_saved:
-        one: 'Não foi possível salvar %{resource}: 1 erro'
-        other: 'Não foi possível salvar %{resource}: %{count} erros.'
+        one: 'Erro ao salvar: 1 erro'
+        other: 'Erro ao salvar: %{count} erros.'
