@@ -32,7 +32,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'mailcatcher', '~> 0.2.4'
+gem 'awesome_print', require: "ap" # get a better experience working with rails console
+gem "tty-spinner"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
