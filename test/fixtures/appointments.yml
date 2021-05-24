@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appointments: 2021-05-23 19:34:51
+  type: one
+  user: one
+
+two:
+  appointments: 2021-05-23 19:34:51
+  type: two
+  user: two
