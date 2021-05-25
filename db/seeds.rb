@@ -6,15 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Type.create!(
-    name: "Início"
-)
-Type.create!(
-    name: "Saída Almoço"
-)
-Type.create!(
-    name: "Volta Almoço"
-)
-Type.create!(
-    name: "Fim"
-)
-puts "Tipos de marcação criadas com sucesso!"
+  [
+    {name: "Início"},
+    {name: "Saída Almoço"},
+    {name: "Volta Almoço"},
+    {name: "Fim"}
+  ]
+)  
+  puts "Tipos de marcação criadas com sucesso!"

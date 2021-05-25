@@ -1,3 +1,3 @@
 class Type < ApplicationRecord
-  has_many :appointment
+  has_many :appointments
 end

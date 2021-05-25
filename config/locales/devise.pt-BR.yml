@@ -8,6 +8,11 @@ pt-BR:
   password_confirmation: "Confirmar senha"
   remember_me: "Lembra Senha"
   Log_in: "Logar"
+  Appointments: "Registro"
+  Type: "Tipo de Marcação"
+  User: "Usuário"
+  Action: "Ações"
+  New_Appointment: "Novo Registro"
   devise:    
     confirmations:
       confirmed: 'Sua conta foi confirmada com sucesso. Você está logado.'
