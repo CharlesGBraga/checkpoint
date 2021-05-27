@@ -11,18 +11,19 @@ class AppointmentsController < ApplicationController
   end
 
   # GET /appointments/new
-  def new
+  def new  
     @appointment = Appointment.new
   end
 
   # GET /appointments/1/edit
-  def edit
+  def edit 
   end
 
   # POST /appointments or /appointments.json
-  def create
+  def create    
+    appointment_params[:user_id] = current_user.id
     @appointment = Appointment.new(appointment_params)
-
+    byebug
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: "Appointment was successfully created." }

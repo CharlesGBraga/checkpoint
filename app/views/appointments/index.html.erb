@@ -5,17 +5,17 @@
 <table class="table table-striped table-hover table-dark">
   <thead>
     <tr>
-      <th><%= I18n.t("Appointments") %></th>
-      <th><%= I18n.t("Type") %></th>
-      <th><%= I18n.t("User") %></th>
-      <th colspan="3"> <%= I18n.t("Action") %></th>
+      <th><%= @appointments.human_attribute_name(:appointments) %></th>
+      <th><%= @appointments.human_attribute_name(:type) %></th>
+      <th><%= @appointments.human_attribute_name(:user) %></th>
+      <th colspan="3"> <%= @appointments.human_attribute_name(:action) %></th>
     </tr>
   </thead>
 
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr >
-        <td><%= format_date(appointment.appointments) %></td>
+        <td><%= l(appointment.appointments) %></td>
         <td><%= appointment.type.name %></td>
         <td><%= appointment.user.name %></td>
         <td><%= link_to 'Show', appointment, class: "table-td-link" %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to I18n.t("New_Appointment"), new_appointment_path, class: 'btn btn-info' %>
+<%= link_to @appointments.human_attribute_name(:new_Appointment), new_appointment_path, class: 'btn btn-info' %>

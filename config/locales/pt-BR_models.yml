@@ -1,0 +1,34 @@
+'pt-BR': 
+  activerecord:  
+    models:
+      appointment: Registro
+      type: Tipo
+      user: usuário
+    attributes:        
+      appointment:
+        id: Identificador do Registro
+        appointments: Registros
+        new_Appointment: Novo Registro
+        type_id: Identificado de Tipo
+        type: Tipo
+        user: Usuário
+        user_id: Identificado de Usuário
+        created_at: Criado em
+        updated_at: Atualiado em 
+        action: Ação
+      types:
+        id: Identificado de Tipo
+        name: Nome
+        created_at: Criado em
+        updated_at: Atualiado em 
+      users:
+        email: E-mail
+        encrypted_password: Senha
+        reset_password_token: Reset de senha
+        reset_password_sent_at: Reset de senha para
+        remember_created_at: Senha lembrada em
+        created_at: Criado em
+        updated_at: Atualiado em 
+        name: Nome
+        address: Endereço
+        admin: Administrador        

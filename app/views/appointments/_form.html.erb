@@ -1,35 +1,30 @@
-<%= form_with(model: appointment, local: true) do |form| %>
-  <% if appointment.errors.any? %>
-    <div class="alert alert-danger alert-dismissible" role="alert" id="alert">
-      <% appointment.errors.full_messages.each do |message| %>
-        <%= message %>
-      <% end %>    
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true" onclick="closeAlert()">&times;</span>
-      </button>
-     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :type_id %>
-      <%= form.collection_select :type_id, Type.order(:id),:id,:name, {}, {class: "form-select form-select-lg mb-3"} %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, class: 'form-control'%>
-  </div>
-
-  <div class="actions ">
-    <%= form.submit "Registrar", class: 'btn btn-info'%>
-  </div>
-  <% if notice %>
-    <div class="alert alert-success alert-dismissible" role="alert" id="alert">
-      <%= t(notice) %>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true" onclick="closeAlert()">&times;</span>
-      </button>
+<%= form_with(model: appointment, local: true) do |form| %>  
+  <div class="col-md-10">  
+    <div class="field">
+      <%= form.label :type_id %>
+        <%= form.collection_select :type_id, Type.order(:id),:id,:name, {}, {class: "form-select form-select-lg mb-3"} %>
     </div>
-  <% end %>
 
+  <%# <div class="field">
+    <%= form.label :user_id %>
+    <%# <%= form.hidden_field_tag :user_id, class: 'form-control' %>
+  <%# </div> %>
+
+    <br>
+    <br>
+    <div class="actions" style="text-align: right;">
+      <%= form.submit "Registrar", class: 'btn btn-info'%>
+      <%= link_to 'Back', appointments_path, class: 'btn btn-danger' %>
+    </div>
+    <% if appointment.errors.any? %>
+      <div class="alert alert-danger alert-dismissible" role="alert" id="alert">
+        <% appointment.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>    
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true" onclick="closeAlert()">&times;</span>
+        </button>
+      </div>
+    <% end %>
+  </div>
 <% end %>
