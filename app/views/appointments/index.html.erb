@@ -8,7 +8,7 @@
       <th><%= @appointments.human_attribute_name(:appointments) %></th>
       <th><%= @appointments.human_attribute_name(:type) %></th>
       <th><%= @appointments.human_attribute_name(:user) %></th>
-      <th colspan="3"> <%= @appointments.human_attribute_name(:action) %></th>
+      <th colspan="3" class="text-center"> <%= @appointments.human_attribute_name(:action) %></th>
     </tr>
   </thead>
 
@@ -18,9 +18,9 @@
         <td><%= l(appointment.appointments) %></td>
         <td><%= appointment.type.name %></td>
         <td><%= appointment.user.name %></td>
-        <td><%= link_to 'Show', appointment, class: "table-td-link" %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment),class: "table-td-link" %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, class: "table-td-link", data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center"><%= link_to '', appointment, class: 'fa fa-eye' %></td>
+        <td class="text-center"><%= link_to '', edit_appointment_path(appointment), class: 'fa fa-edit' %></td>
+        <td class="text-center"><%= link_to '', appointment, method: :delete, class: 'fa fa-trash', data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

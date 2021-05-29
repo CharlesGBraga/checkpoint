@@ -20,15 +20,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #FFF;
 
   &:visited {
     color: #666;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: rgb(160, 155, 155);
+    background-color: rgb(100, 99, 99);
   }
 }
 .table-td-link{
