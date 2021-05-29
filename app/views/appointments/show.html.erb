@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Appointments:</strong>
-  <%= @appointment.appointments %>
-</p>
+    <p>
+      <strong>Appointments:</strong>
+      <%= l(@appointment.appointments) %>
+    </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @appointment.type %>
-</p>
+    <p>
+      <strong>Type:</strong>
+      <%= @appointment.type.name %>
+    </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @appointment.user %>
-</p>
+    <p>
+      <strong>User:</strong>
+      <%= @appointment.user.name %>
+    </p>
+  </div>
+  <div class="panel-footer">
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+
+    <div class="actions" style="text-align: right;">
+      <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-info' %>
+      <%= link_to 'Back', appointments_path, class: 'btn btn-warning' %>
+    </div>
+  </div>
+</div>
